@@ -1,0 +1,243 @@
+
+@mixin flex {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;     /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;   /* TWEENER - IE 10 */
+  display: -webkit-flex;   /* NEW - Chrome */
+  display: flex;       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+// Align children verticaly
+@mixin flex-center {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;     /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;   /* TWEENER - IE 10 */
+  display: -webkit-flex;   /* NEW - Chrome */
+  display: flex;       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@mixin flex-reverse {
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -moz-box-orient: horizontal;
+
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+@mixin space-between {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+// Values: flex-start (default) | flex-end | center | space-between | space-around
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+      -webkit-box-pack: start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+  } @else if $value == flex-end {
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+  } @else if $value == space-between {
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+  } @else if $value == space-around {
+      -ms-flex-pack: distribute;
+  } @else {
+      -webkit-box-pack: $value;
+      -moz-box-pack: $value;
+      -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+// Values: flex-start | flex-end | center | baseline | stretch (default)
+@mixin align-items($value: stretch) {
+@if $value == flex-start {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+} @else if $value == flex-end {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+} @else {
+  -webkit-box-align: $value;
+  -moz-box-align: $value;
+  -ms-flex-align: $value;
+}
+-webkit-align-items: $value;
+align-items: $value;
+}
+
+// Values: row (default) | row-reverse | column | column-reverse
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: horizontal;
+      -moz-box-direction: reverse;
+      -moz-box-orient: horizontal;
+  } @else if $value == column {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -moz-box-direction: normal;
+      -moz-box-orient: vertical;
+  } @else if $value == column-reverse {
+      -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+      -moz-box-direction: reverse;
+      -moz-box-orient: vertical;
+  } @else {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-direction: normal;
+      -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+//Values: nowrap (default) | wrap | wrap-reverse
+@mixin flex-wrap($value: nowrap) {
+  // No Webkit/FF Box fallback.
+  -webkit-flex-wrap: $value;
+  @if $value == nowrap {
+      -ms-flex-wrap: none;
+  } @else {
+      -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+// Values: auto (default) | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($value: auto) {
+// No Webkit Box Fallback.
+-webkit-align-self: $value;
+@if $value == flex-start {
+  -ms-flex-item-align: start;
+} @else if $value == flex-end {
+  -ms-flex-item-align: end;
+} @else {
+  -ms-flex-item-align: $value;
+}
+align-self: $value;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-flex;   /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-inline-box;     /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-inline-flexbox;   /* TWEENER - IE 10 */
+  display: -webkit-inline-flex;   /* NEW - Chrome */
+  display: inline-flex;       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+
+@mixin wrapper-small{
+  width: 60%;
+  max-width: 1428px;
+  margin: 0 auto;
+  @media screen and (max-width: 1100px) {
+    width: 75%;
+    max-width: 75%;		
+  }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    max-width: 90%;		
+  }
+}
+
+@mixin wrapper-normal{
+width: 60%;
+max-width: 1350px;
+@media screen and (max-width: 1100px) {
+  width: 70%;
+  max-width: 70%;		
+}
+@media screen and (max-width: 768px) {
+  width: 85%;
+  max-width: 85%;		
+}
+margin: 0 auto;
+}
+
+@mixin wrapper-wide{
+width: 87%;
+max-width: 1436;
+margin: 0 auto;
+  @media screen and (max-width: 900px){
+      width: 87.5%;
+      max-width: 87.5%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 95%;
+    max-width: 95%;		
+  }
+}
+
+@mixin wrapper-oversized{
+  margin-left: calc(-3vw - 2em);
+  margin-right: calc(-3vw - 2em);
+    @media(max-width:500px){
+        margin-inline:0;
+    }
+}
+
+@mixin select{
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  padding-block: 1em;
+  padding-inline: 1.5em;
+  color: $beige-200;
+  background-color: $blue-700;
+  @include display-s;
+  border: none;
+  outline:3px solid $beige-200;
+  &:focus{
+    outline: 3px solid $blue-500;
+  }
+}
+
+@mixin label{
+  display: flex;
+  width: 100%;
+ 
+  font-size: 100%;
+}
+
+@mixin input{
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  background-color: $blue-700;
+  border: none;
+  outline:3px solid $beige-200;
+  &:focus{
+    outline: 3px solid $blue-500;
+  }
+}
+
+@mixin option{
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+  color: $beige-200;
+  background-color: $black;
+  @include display-s;
+  padding-inline:1em;
+}

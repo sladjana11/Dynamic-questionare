@@ -1,0 +1,138 @@
+@import "./includes/_includes.scss";
+/* Typography */
+
+
+@font-face {
+   font-family: 'Aribau Grotesk TRIAL';
+   src: url('../fonts/AribauGroteskTRIAL-Rg.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/AribauGroteskTRIAL-Rg.woff') format('woff');/* Modern Browsers */
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aribau Grotesk TRIAL';
+  src: url('AribauGroteskTRIAL-Bd.woff2') format('woff2'),
+      url('AribauGroteskTRIAL-Bd.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FONTSPRING DEMO - Glance Sans';
+  src: url('../fonts/FONTSPRINGDEMO-GlanceSansRegular.woff2') format('woff2'),
+      url('../fonts/FONTSPRINGDEMO-GlanceSansRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FONTSPRING DEMO - Glance Sans';
+  src: url('../fonts/FONTSPRINGDEMO-GlanceSansBold.woff2') format('woff2'),
+      url('../fonts/FONTSPRINGDEMO-GlanceSansBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-headline;
+  color: $beige-100;
+}
+
+
+
+html {
+  font-variant-ligatures: no-common-ligatures;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 0.9rem;
+  font-size: clamp(0.9rem, #{'0.85rem + 0.125vw'}, 1rem);
+  font-family: $font-body;
+  line-height: 1.7;
+  color: $beige-200;
+  li, a, span {
+    font-family: $font-body;
+    margin-bottom: 1em;
+  }
+}
+
+ul {
+  margin: 1em 0 0;
+  padding-left: 20px;
+  list-style: disc;
+  
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+
+  a {
+    color: $blue-700;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    &:hover{
+      color: $turquoise;
+      text-decoration: underline;
+    }
+
+  }
+
+
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  display: block;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub, sup {
+  font-family: inherit;
+  font-size: 75%;
+  color: inherit;
+  line-height: initial;
+}
+
+
+input{
+  font-family: $font-body;
+}
+
+p, ul, ol, table {
+  margin-bottom: 1.2em;
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+}
+
+.whole-column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+

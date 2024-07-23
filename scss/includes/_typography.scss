@@ -1,0 +1,133 @@
+
+ @mixin display-l {
+   font-size:  3.28em;
+   font-size: clamp(1.9em, #{'1.1rem + 2vw'},  3.28em);
+   font-family: $font-headline;
+   line-height: 1.2;
+   font-weight: normal;
+
+ }
+ 
+ @mixin display-m {
+   font-size: 2.25em;
+   font-size: clamp(1.375em, #{'1.05rem + 1vw'}, 2.25em);
+   font-family: $font-headline;
+   line-height: 1.2;
+   &:first-child {
+     margin-top: 0;
+   }
+ }
+ 
+ @mixin display-s {
+   font-size: 1em;
+   font-size: clamp(1.15em, #{'0.925rem + 0.375vw'}, 1.5em);
+   font-family: $font-headline;
+   line-height: 1.3;
+   &:first-child {
+     margin-top: 0;
+   }
+ }
+ @mixin display-xs {
+   font-size: 1em;
+   font-size: clamp(0.85em, #{'0.925rem + 0.375vw'}, 1.05em);
+   font-family: $font-headline;
+   line-height: 1.3;
+   &:first-child {
+     margin-top: 0;
+   }
+ }
+ @mixin text-xl {
+   font-size: 1.6em;
+   font-size: clamp(1.5em, #{'0.93rem + 0.375vw'}, 2.3em);
+   font-family: $font-body;
+   line-height: 1.3;
+   &:first-child {
+     margin-top: 0;
+   }
+ }
+ @mixin text-x {
+   font-size: 1.3em;
+   font-size: clamp(1.3em, #{'0.925rem + 0.375vw'}, 1.55em);
+   font-family: $font-body;
+   line-height: 1.3;
+   &:first-child {
+     margin-top: 0;
+   }
+ }
+ 
+ @mixin text-l {
+   font-size: 0.9em;
+   font-size: clamp(.9em, #{'0.85rem + 0.125vw'}, 1em);
+   font-family: $font-body;
+   line-height: 1.7;
+ }
+ 
+ @mixin text-m {
+   font-size: 0.875em;
+   font-size: clamp(0.75em, #{'0.725rem + 0.125vw'}, 0.875em);
+   font-family: $font-body;
+   line-height: 1.6;
+ }
+ 
+ @mixin text-s {
+   font-size: 0.75em;
+   font-size: clamp(0.55em, #{'0.6rem + 0.125vw'}, 0.75em);
+   font-family: $font-body;
+   line-height: 1.2;
+ }
+ 
+ @mixin btn {
+   display: inline-block;
+   padding: 0.7em 1.5em;
+   font-family: $font-headline;
+   font-size: 1em;
+   font-size: clamp(0.875em, #{'0.85rem + 0.125vw'}, 1em);
+   border-radius: 27px;
+   color: $white;
+   background-color: $blue-700;
+   transition: background-color 0.3s ease;
+   
+   &:hover {
+     background-color: $color-secondary;
+     text-decoration: none;
+   }
+ }
+ 
+ @mixin btn-icon {
+   position: relative;
+   padding-right: 3em;
+ 
+   &::after {
+     content: '';
+     position: absolute;
+     top: 50%;
+     right: 1.1em;
+     transform: translateY(-50%);
+     width: 1.3em;
+     height: 1.3em;
+     background-image: url('../../icons/arrow-down-circle.svg');
+     background-size: contain;
+     filter: brightness(0) invert(1);
+   }
+ }
+ 
+ // Slider arrows
+ .splide__arrows {
+   position: absolute;
+   z-index: 1;
+ 
+   button {
+     background: initial;
+     border: 0;
+     cursor: pointer;
+   }
+ }
+ 
+ .splide__arrow--prev {
+   position: absolute;
+   transform: rotate(180deg);
+ }
+ 
+ .splide__arrow--next {
+   position: absolute;
+ }

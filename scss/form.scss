@@ -1,0 +1,242 @@
+@import "./includes/includes.scss";
+body{
+   background-color: $blue-700;
+}
+.spacer{
+   margin-block:  $section-spacing;
+}
+.wrapper-normal{
+   @include wrapper-normal;
+}
+
+.header{
+   @include display-l;
+   margin-bottom: 0.4em;
+   margin-top:1.5em;
+}
+
+.btn{
+   @include text-m;
+   background-color: transparent;
+   color: $beige-200;
+   text-decoration: underline;
+   cursor: pointer;
+   border:none;
+   margin-top: .5em;;
+   margin-bottom: 1.8em;
+   padding-inline: 0;
+}
+
+
+.show-more{
+   display: none;
+   margin-inline: 1.5em;
+   transition: max-height 0.3s;
+   h3{
+      @include display-s;
+      margin-bottom: 1em;
+   }
+   p{
+      margin-bottom: 1.7em;
+   }
+   .show-more-inside{
+      margin-top: 1.5em;
+      margin-bottom: 4em;
+      display: flex;
+      flex-direction: column;
+      .img-holder{
+         width: 40%;
+      }
+      .img-explain{
+         @include display-s;
+      }
+   }
+}
+
+.show-more.active{
+   display: block;
+}
+
+label{
+   @include label;
+   margin-bottom: 0.4em;
+   @include text-l;
+}
+
+select{
+   @include select;
+}
+
+option{
+   @include option;
+}
+
+input[type="number"]{
+   color: $beige-100;
+   @include input;
+   @include text-l;
+   padding-inline: 1.5em;
+   padding-block: 1em;
+
+}
+
+::placeholder {
+   color: $beige-100;
+   opacity: 1; /* Firefox */
+ }
+ 
+ ::-ms-input-placeholder { /* Edge 12-18 */
+   color: $beige-100;
+ }
+
+.info-with-margin-bottom{
+   display: flex;
+   gap: .9em;
+   align-items: center;
+   margin-top:.6em;
+   margin-bottom: 1.5em;
+
+   .image-holder{
+      width: 3%;
+      display: flex;
+      align-items: center;
+      img{
+         width:100%;
+         height:100%;
+      }
+   }
+   .info{
+      width: 95%;
+      @include text-s;
+      margin-bottom:0;
+   }
+}
+
+.box{
+   margin-bottom: 1.9em;
+}
+.box.error{
+   input[type="number"]{
+      outline: 3px solid red;
+   }
+   select{
+      outline: 3px solid red;
+   }
+}
+
+.box.success{
+   input{
+      outline: solid 3px green;
+   }
+}
+
+.box.open{
+   opacity: 50%;
+}
+
+.toggle-box{
+   display: flex;
+   align-items: center;
+   gap: 1em;
+   margin-top: 2em;
+   .checkbox-label{
+      @include display-s;
+   }
+   .switch {
+      position: relative;
+      display: inline-block;
+      width: 4.2em;
+      height: 3.1em;
+    }
+    
+    .switch input[type="checkbox"] { 
+      opacity: 0;
+         height: 2em;
+         width: 3em;
+         position: relative;
+         z-index:1000;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    input[type="checkbox"]:checked + .slider {
+      background-color: #2196F3;
+    }
+    
+    input[type="checkbox"]:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input[type="checkbox"]:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+}
+
+.roce-dropdown-separator{
+   margin-bottom: 1.8em;
+}
+
+#dropdown-roce{
+   display: none;
+}
+#dropdown-cash{
+   display: none;
+}
+
+.button-complete, .delete-btn{
+   @include display-xs;
+   width: 100%;
+   margin-top: 2em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   text-align: center;
+   background-color:$turquoise;
+   color: $blue-700;
+   padding-block: 1.3em;
+   margin-top:1em;
+   width: 100%;
+   height: 100%;
+   align-self: center;
+   transition: background-color 0.4s linear, color 0.4s linear;
+   
+   &:hover {
+      background-color: $blue-500;
+      color: $white;
+      text-decoration: none;
+   }
+}

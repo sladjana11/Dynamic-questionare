@@ -1,0 +1,343 @@
+.splide__arrows {
+  position: absolute;
+  z-index: 1;
+}
+.splide__arrows button {
+  background: initial;
+  border: 0;
+  cursor: pointer;
+}
+
+.splide__arrow--prev {
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.splide__arrow--next {
+  position: absolute;
+}
+
+body {
+  background-color: #001b96;
+}
+
+.spacer {
+  margin-block: clamp(3.2em, 1.2rem + 4.8vw, 6em);
+}
+
+.wrapper-normal {
+  width: 60%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1100px) {
+  .wrapper-normal {
+    width: 70%;
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper-normal {
+    width: 85%;
+    max-width: 85%;
+  }
+}
+
+.header {
+  font-size: 3.28em;
+  font-size: clamp(1.9em, 1.1rem + 2vw, 3.28em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 0.4em;
+  margin-top: 1.5em;
+}
+
+.btn {
+  font-size: 0.875em;
+  font-size: clamp(0.75em, 0.725rem + 0.125vw, 0.875em);
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: transparent;
+  color: #fbf3de;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  margin-top: 0.5em;
+  margin-bottom: 1.8em;
+  padding-inline: 0;
+}
+
+.show-more {
+  display: none;
+  margin-inline: 1.5em;
+  transition: max-height 0.3s;
+}
+.show-more h3 {
+  font-size: 1em;
+  font-size: clamp(1.15em, 0.925rem + 0.375vw, 1.5em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+.show-more h3:first-child {
+  margin-top: 0;
+}
+.show-more p {
+  margin-bottom: 1.7em;
+}
+.show-more .show-more-inside {
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+}
+.show-more .show-more-inside .img-holder {
+  width: 40%;
+}
+.show-more .show-more-inside .img-explain {
+  font-size: 1em;
+  font-size: clamp(1.15em, 0.925rem + 0.375vw, 1.5em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+}
+.show-more .show-more-inside .img-explain:first-child {
+  margin-top: 0;
+}
+
+.show-more.active {
+  display: block;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  font-size: 100%;
+  margin-bottom: 0.4em;
+  font-size: 0.9em;
+  font-size: clamp(0.9em, 0.85rem + 0.125vw, 1em);
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+select {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  padding-block: 1em;
+  padding-inline: 1.5em;
+  color: #fbf3de;
+  background-color: #001b96;
+  font-size: 1em;
+  font-size: clamp(1.15em, 0.925rem + 0.375vw, 1.5em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+  border: none;
+  outline: 3px solid #fbf3de;
+}
+select:first-child {
+  margin-top: 0;
+}
+select:focus {
+  outline: 3px solid #0318f9;
+}
+
+option {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+  color: #fbf3de;
+  background-color: #2c2a2a;
+  font-size: 1em;
+  font-size: clamp(1.15em, 0.925rem + 0.375vw, 1.5em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+  padding-inline: 1em;
+}
+option:first-child {
+  margin-top: 0;
+}
+
+input[type=number] {
+  color: #f3e7c2;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  background-color: #001b96;
+  border: none;
+  outline: 3px solid #fbf3de;
+  font-size: 0.9em;
+  font-size: clamp(0.9em, 0.85rem + 0.125vw, 1em);
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  padding-inline: 1.5em;
+  padding-block: 1em;
+}
+input[type=number]:focus {
+  outline: 3px solid #0318f9;
+}
+
+::-moz-placeholder {
+  color: #f3e7c2;
+  opacity: 1; /* Firefox */
+}
+
+::placeholder {
+  color: #f3e7c2;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: #f3e7c2;
+}
+
+.info-with-margin-bottom {
+  display: flex;
+  gap: 0.9em;
+  align-items: center;
+  margin-top: 0.6em;
+  margin-bottom: 1.5em;
+}
+.info-with-margin-bottom .image-holder {
+  width: 3%;
+  display: flex;
+  align-items: center;
+}
+.info-with-margin-bottom .image-holder img {
+  width: 100%;
+  height: 100%;
+}
+.info-with-margin-bottom .info {
+  width: 95%;
+  font-size: 0.75em;
+  font-size: clamp(0.55em, 0.6rem + 0.125vw, 0.75em);
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.box {
+  margin-bottom: 1.9em;
+}
+
+.box.error input[type=number] {
+  outline: 3px solid red;
+}
+.box.error select {
+  outline: 3px solid red;
+}
+
+.box.success input {
+  outline: solid 3px green;
+}
+
+.box.open {
+  opacity: 50%;
+}
+
+.toggle-box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+  /* Rounded sliders */
+}
+.toggle-box .checkbox-label {
+  font-size: 1em;
+  font-size: clamp(1.15em, 0.925rem + 0.375vw, 1.5em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+}
+.toggle-box .checkbox-label:first-child {
+  margin-top: 0;
+}
+.toggle-box .switch {
+  position: relative;
+  display: inline-block;
+  width: 4.2em;
+  height: 3.1em;
+}
+.toggle-box .switch input[type=checkbox] {
+  opacity: 0;
+  height: 2em;
+  width: 3em;
+  position: relative;
+  z-index: 1000;
+}
+.toggle-box .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.toggle-box .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.toggle-box input[type=checkbox]:checked + .slider {
+  background-color: #2196F3;
+}
+.toggle-box input[type=checkbox]:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.toggle-box input[type=checkbox]:checked + .slider:before {
+  transform: translateX(26px);
+}
+.toggle-box .slider.round {
+  border-radius: 34px;
+}
+.toggle-box .slider.round:before {
+  border-radius: 50%;
+}
+
+.roce-dropdown-separator {
+  margin-bottom: 1.8em;
+}
+
+#dropdown-roce {
+  display: none;
+}
+
+#dropdown-cash {
+  display: none;
+}
+
+.button-complete, .delete-btn {
+  font-size: 1em;
+  font-size: clamp(0.85em, 0.925rem + 0.375vw, 1.05em);
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.3;
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #10e0a3;
+  color: #001b96;
+  padding-block: 1.3em;
+  margin-top: 1em;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  transition: background-color 0.4s linear, color 0.4s linear;
+}
+.button-complete:first-child, .delete-btn:first-child {
+  margin-top: 0;
+}
+.button-complete:hover, .delete-btn:hover {
+  background-color: #0318f9;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./dist/form.css">
+  <link rel="stylesheet" href="./dist/global.css">
+  <link rel="stylesheet" href="./dist/reset.css">
+
+  <title>SMP Value Benchmark</title>
+</head>
+<body>
+   <div class="spacer">
+      <div class="wrapper-normal">
+            <div class="peer-group-container">
+                  <h1 class="header">Peer group</h1>
+                  <p class="explain">The peer group forms the relevant reference group for your company. Company size and corporate industry focus are often sufficient for an initial indication.</p>
+
+                  <button class="btn details-btn"></button>
+                  <div class="show-more">
+                     <div class="show-more-inside">
+                        <h3>The following sectors are available:</h4>
+
+                           <h4>Mechanical engineering:</h4>
+                           <p>Includes companies whose activities extend to the development, construction and production of machines and systems. The “mechanical engineering” sector also includes the sub-sectors “special mechanical engineering” and “machine tool engineering” that can be selected. </p>
+
+                           <h4> Special mechanical engineering : </h4>
+                           <p>Subset of the mechanical engineering industry. The focus in special machine construction is on the development and construction of individual pieces or small series specifically according to customer requirements.</p>
+
+                           <h4>Machine tool construction :</h4>
+                           <p>Also a subset of the mechanical engineering industry. Companies in this category usually specialize in the design and production of machines that are used to produce workpieces using tools. What is characteristic is that the movement of these two components relative to one another is dictated by the machine. The most important representatives include turning and milling machines, eroding machines and mechanical presses.</p>
+
+                           <h4>Automotive :</h4>
+                           <p>Comprises companies in the automotive industry whose activities are predominantly related to the development, design and production of automobiles. Here the focus is on the supplier industry. Classic automobile manufacturers are not part of the consideration set.</p>
+
+                           <h4>Trade : </h4>
+                           <p>Companies whose activities primarily involve the purchase and distribution of goods, assets and services. The “Trade” sector includes both wholesale and retail and also includes the sub-sectors “E-Commerce” and “Stationary Retail” that can be selected. </p>
+
+                           <h4>E commerce :</h4>
+                           <p>Companies in the (retail) trade sector that carry out purchasing and sales primarily online.</p>
+
+                           <h4>Stationary retail :</h4>
+                           <p>Here too, the focus of the peer group is on retail. In this case, stationary retail. Classic branch lists are listed.</p>
+
+                           <h4>Manufacturing industry : </h4>
+                           <p>This is the comparison group for industrial companies that “produce” themselves – in small or large quantities. A conscious differentiation between products does not yet take place at this level.</p>
+                     </div>
+                  </div>
+
+                  <div class="industry-box box">
+                     <label for="industry" class="industry-label">INDUSTRY</label>
+                     <select id="industry" data-id="industry" class="box">
+                        <option value="none" class="nones" data-id="nones">Please choose...</option>
+                        <option value="Mechanical engineeering" data-id="mechanical-enginereening">Mechanical engineeering</option>
+                        <option value="Special mechanical engineering" data-id="special-engineering">Special mechanical engineering</option>
+                        <option value="Machine tool construction" data-id="machine-tool-construction">Machine tool construction</option>
+                        <option value="Automotive" data-id="automotive">Automotive</option>
+                        <option value="Trade" data-id="trade">Trade</option>
+                        <option value="Ecommerce" data-id="ecommerce">Ecommerce</option>
+                        <option value="Stationary trade" data-id="stationary-trade">Stationary trade</option>
+                        <option value="Prod. business" data-id="prod-business">Prod. business</option>
+                     </select>
+                  </div>
+
+                  <div class="total-box  box">
+                     <label for="total" class="total-label">OVERALL PERFORMANCE (IN MILLIONS OF €) </label>
+                     <input id="total" data-id="total" type="number" class="form-input" placeholder="Total performance" >
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png"class="info-img" loading="lazy"></div>
+                        <p class="info">The total performance corresponds to the sales revenue plus the changes in inventories of semi-finished and finished products
+                           as well as other capitalized own work. Total performance is the most widely used indicative estimator of company size.</p>
+                     </div>
+                  </div>
+
+            </div>
+
+            <div class="performance-corridor-container">
+                  <h1 class="header">Performance corridor</h1>
+                  <p class="explain">The performance corridor provides indications of personnel performance. In simple terms you can say: “How many euros do you pay your staff to generate a euro of gross profit?”</p>
+
+                  <button class="btn details-btn"></button>
+                  <div class="show-more">
+                     <div class="show-more-inside">
+                        <p class="img-explain">
+                           In general, a company with a higher level of added value generally also needs more of its own human capital or more and better qualified workers. The two parameters personnel expenses and gross profit are therefore inevitably linked to one another. One could also say that the gross profit ratio represents a limiting condition for personnel costs.
+                           It can be proven mathematically/statistically that companies that deviate from a certain ratio (gross profit to personnel costs) are less likely to achieve a positive overall result. We call the path of this relation the performance corridor. To put it simply, you can also say that the performance corridor evaluates how much you have to pay your staff in order to generate a EURO gross profit.
+                           Example evaluation of value performance.                                            
+                        </p>
+                       <div class="img-holder"><img src="./img/value_performance.png"></div> 
+                     </div>
+                  </div>
+               
+
+                  <div class="personnel-box  box">
+                     <label for="personnel" class="personnel-label">PERSONNEL EXPENSES (in percent)</label>
+                     <input type="number" id="personnel" data-id="personnel" class="form-input" placeholder="Personnel expenses">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info">The personnel expenses in percent correspond to the absolute personnel expenses in relation to the total performance:  <br> Personnel expenses (%) = personnel expenses (abs.) ÷ total performance</p>
+                     </div>
+                  </div>
+
+                  <div class="gross-box  box">
+                     <label for="gross" class="gross-label">GROSS PROFIT (in percent)</label>
+                     <input type="number" id="gross" data-id="gross" class="form-input" placeholder="Gross profit">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info">The gross profit in percent corresponds to the absolute gross profit in relation to the total performance. The gross profit is calculated from the total performance minus the cost of materials: <br>Gross profit (%) = Gross profit (abs.) ÷ total performance</p>
+                     </div>
+                  </div>
+            </div>
+
+            <div class="return-capital-container">
+                  <h1 class="header">Return on Capital Employed</h1>
+                  <p class="explain">Return on Capital Employed (ROCE) is a key figure that measures how efficiently and profitably a company uses its capital. This calculation is a bit more comprehensive. Please feel free to use the calculation assistance</p>
+
+                  <button class="btn details-btn"></button>
+                  <div class="show-more">
+                     <div class="show-more-inside">
+                        <p class="img-explain">
+                           As a profitability indicator, ROCE describes how high the return on capital employed is. It therefore reflects the ratio of EBIT to capital stock and thus takes capital performance into account in addition to operational performance.Against this background, ROCE reflects all relevant parameters of a business model and thus allows a “fair and objective” assessment of performance in comparison with business model peers using: <br> Capital employed = fixed assets + working capital
+                           <div class="img-holder"><img src="./img/Indicative_bilans.png"></div>
+                        </p>
+                     </div>
+                  </div>
+               
+
+                  <div class="roce-box  box">
+                     <label for="roce" class="roce-label">ROCE (in percent)</label>
+                     <input type="number" id="roce" data-id="roce" class="form-input" placeholder="Return on capital employed">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info">ROCE relates the operating result (EBIT) to the capital tied up (used) in the company: <br> 
+                           ROCE = EBIT ÷ capital employed <br>
+                           The capital employed defines the operational capital required to operate the business model. It therefore includes fixed assets (in the sense of capital goods such as machinery) plus working capital:<br>
+                           Capital employed = fixed assets + working capital
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="toggle-box" id="toggle-return">
+                     <div class="switch">
+                        <input type="checkbox" id="toggleRoce" data-id="toggleRoce" class="checkbox">
+                        <span class="slider round"></span>
+                     </div>
+                     <label for="toggle-roce" class="checkbox-label">Have ROCE calculated</label>
+                  </div>
+
+                  <div class="dropdown" id="dropdown-roce">
+                     <div class="roce-dropdown-separator">
+                           <label for="ebit" class="form-ebit-label"><p class="form-text">EBIT (in milions of EURO, one decimal place)</p></label>
+                           <input type="number" class="form-roce form-text" id="ebit" data-id="ebit" name="EBIT" data-name="EBIT" placeholder="Earnings before Interest and taxes EUR milion ">
+                     </div>
+
+                     <div class="roce-dropdown-separator">
+                           <label for="assets" class="form-assets-label"><p class="form-text">CAPITAL ASSETS in EURO</p></label>
+                           <input type="number" class="form-assets form-text" id="assets"  data-id="assets" name="ASSETS" data-name="ASSETS" placeholder="Capital assets">
+                     </div>
+
+                     <div class="roce-dropdown-separator">
+                           <label for="stocks" class="form-stocks-label"><p class="form-text">STOCKS</p></label>
+                           <input type="number" class="form-stocks form-text" id="stocks"  data-id="stocks" name="STOCKS" data-name="STOCKS" placeholder="Inventories, Including advance payment made on orders">
+                     </div>
+
+                     <div class="roce-dropdown-separator">
+                           <label for="requirements" class="form-requirements-label"><p class="form-text">REQUIREMENTS</p></label>
+                           <input type="number" class="form-requirements form-text" id="requirements"  data-id="requirements" name="REQUIREMENTS" data-name="REQUIREMENTS" placeholder="Requests from deliveries and services">
+                     </div>
+
+                     <div class="roce-dropdown-separator">
+                          <label for="liabilities" class="form-liabilities-label"><p class="form-text">LIABILITIES</p></label>
+                          <input type="number" class="form-liabilities form-text" id="liabilities"  data-id="liabilities" name="LIABILITIES" data-name="LIABILITIES" placeholder="Liabilities from goods and service">
+                     </div>
+
+                     <div class="roce-dropdown-separator">
+                         <label for="payment" class="form-payment-label"><p class="form-text">PAYMENT</p></label>
+                         <input type="number" class="form-payment form-text" id="payment"  data-id="payment" name="PAYMENT" data-name="PAYMENT" placeholder="Advance payments received on orders">
+                     </div>
+                  </div>
+
+            </div>
+
+            <div class="cash-conversion-container">
+                  <h1 class="header">Cash Conversion Cycle</h1>
+                  <p class="explain">The Cash Conversion Cycle (CCC) describes the average duration of capital commitment within the operational value chain. A short or even negative CCC indicates a strong business model and a strong position in the market. The CCC has also become the focus of many managers due to the current interest rate developments. The most efficient way to counteract external interest rate pressure is to optimize your own cash flows (i.e. a mirror image of the CCC).</p>
+
+                  <button class="btn details-btn"></button>
+                  <div class="show-more">
+                     <div class="show-more-inside">
+                        <p class="img-explain">
+                           The cash conversion cycle results from the average capital tied up in the warehouse (Days Inventory Outstanding, DIO) plus the debtor term as the average tie-up of sales as receivables (Days Sales Outstanding, DSO) minus the creditor term or the turnover time of the payables from deliveries and Benefits (Days Payable Outstanding, DPO): 
+                        <div class="img-holder"><img src="./img/ccc_cash-conversion.png"></div> 
+                        </p> 
+                     </div>  
+                  </div>
+                      
+                      
+
+
+                  <div class="cash-box  box">
+                     <label for="cash" class="cash-label">CCC (in days)</label>
+                     <input type="number" id="cash"  data-id="cash" class="form-input" placeholder="Cash conversion cycle">
+                  </div>
+                  
+
+                  <div class="toggle-box" id="toggle-cash">
+                     <div class="switch">
+                        <input type="checkbox" id="toggleCCC" data-id="toggleCCC" class="checkbox" >
+                        <span class="slider round"></span>
+                     </div>
+                     <label for="toggle-ccc" class="checkbox-label">Have CCC calculated</label>
+                  </div>
+                  <div class="dropdown" id="dropdown-cash">
+                     <label for="dio" class="form-dio-label"><p class="form-text">DIO</p></label>
+                     <input type="number" class="form-dio form-text" id="dio" data-id="dio" name="DIO" data-name="DIO" placeholder="Storage range">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info-middle">DIO = Inventories ÷ Sales × 365</p>
+                     </div>
+
+
+                     <label for="debtor" class="form-debtor-label"><p class="form-text">DSO</p></label>
+                     <input type="number" class="form-debtor form-text" id="debtor"  data-id="debtor" name="DEBTOR" data-name="DEBTOR" placeholder="Debtor term">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info-middle">DSO = Ford. LuL ÷ Sales revenue × 365</p>
+                     </div>
+
+                     <label for="vendor" class="form-vendor-label"><p class="form-text">DPO</p></label>
+                     <input type="number" class="form-vendor form-text" id="vendor"  data-id="vendor" name="VENDOR" data-name="VENDOR" placeholder="Vendor term">
+                     <div class="info-with-margin-bottom">
+                        <div class="image-holder"><img src="./img/information-icon-svgrepo-com.png" class="info-img" loading="lazy"></div>
+                        <p class="info-middle">DPO = Vblk. LuL ÷ (cost of materials + external service) × 365</p>
+                     </div>
+
+                  
+                  </div>
+
+            </div>
+
+            <a href="./form_second_page.html" id="button-complete" class="button-complete">Complete the Questionary</a>
+            <div class="reset-form"></div>
+      </div>
+
+   </div>
+
+
+ <script src="script/form.js"></script> 
+</body>
+</html>

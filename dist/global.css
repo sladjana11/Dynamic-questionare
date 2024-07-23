@@ -1,0 +1,130 @@
+.splide__arrows {
+  position: absolute;
+  z-index: 1;
+}
+.splide__arrows button {
+  background: initial;
+  border: 0;
+  cursor: pointer;
+}
+
+.splide__arrow--prev {
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.splide__arrow--next {
+  position: absolute;
+}
+
+/* Typography */
+@font-face {
+  font-family: "Aribau Grotesk TRIAL";
+  src: url("../fonts/AribauGroteskTRIAL-Rg.woff2") format("woff2"), url("../fonts/AribauGroteskTRIAL-Rg.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aribau Grotesk TRIAL";
+  src: url("AribauGroteskTRIAL-Bd.woff2") format("woff2"), url("AribauGroteskTRIAL-Bd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FONTSPRING DEMO - Glance Sans";
+  src: url("../fonts/FONTSPRINGDEMO-GlanceSansRegular.woff2") format("woff2"), url("../fonts/FONTSPRINGDEMO-GlanceSansRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FONTSPRING DEMO - Glance Sans";
+  src: url("../fonts/FONTSPRINGDEMO-GlanceSansBold.woff2") format("woff2"), url("../fonts/FONTSPRINGDEMO-GlanceSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "FONTSPRING DEMO - Glance Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  color: #f3e7c2;
+}
+
+html {
+  font-variant-ligatures: no-common-ligatures;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.85rem + 0.125vw, 1rem);
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #fbf3de;
+}
+body li, body a, body span {
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  margin-bottom: 1em;
+}
+
+ul {
+  margin: 1em 0 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+ul li {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #001b96;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+a:hover {
+  color: #10e0a3;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+video {
+  display: block;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub, sup {
+  font-family: inherit;
+  font-size: 75%;
+  color: inherit;
+  line-height: initial;
+}
+
+input {
+  font-family: "AribauGroteskTrial-Rg", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+}
+
+p, ul, ol, table {
+  margin-bottom: 1.2em;
+}
+
+.whole-column {
+  display: flex;
+  flex-direction: column;
+}
